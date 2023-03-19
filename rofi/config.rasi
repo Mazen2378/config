@@ -1,0 +1,97 @@
+
+configuration{
+    modi: "run,drun,window";
+    icon-theme: "Oranchelo";
+    show-icons: false;
+    terminal: "gnome-terminal";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: " 﩯  Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
+}
+
+@theme "/dev/null"
+
+* {
+  bg-alt: #12181c33;
+  bg: #12181c33;
+
+  fg: #000;
+  fg-alt: #FFFFFF;
+
+  background-color: transparent;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 40%;
+  height: 40%;
+  padding: 5px;
+  background-color: @bg-alt;
+}
+
+
+mainbox {
+  border: 2px;
+  border-color: #dddee2;
+  background-color: @bg-alt;
+  children: [inputbar, listview];
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+prompt {
+  background-color: @bg-alt;
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @fg-alt;
+}
+
+element {
+  padding: 8 7;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg-alt;
+  text-style: bold;
+  border:1px;
+  border-color: #fff;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 30;
+}
+
+entry {
+  background-color: @bg-alt;
+  padding: 12;
+  text-color: @fg-alt;
+}
+
+
+listview {
+  padding: 8 12;
+  background-color: @bg;
+  columns: 1;
+  lines: 8;
+}
+
+
+
